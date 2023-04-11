@@ -1,4 +1,5 @@
 //complete this code
+// parent class is person
 class Person {
     constructor(name, age) {
         this.name = name;
@@ -13,6 +14,7 @@ class Person {
     }
 }
 
+// student and teacher are subclasses/child classes
 class Student extends Person {
     study() {
         console.log(`${super.name} is studying.`);
