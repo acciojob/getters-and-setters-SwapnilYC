@@ -1,37 +1,32 @@
 //complete this code
 // parent class is person
-
+// old code: https://p.ip.fi/EBDJ
 class Person {
   constructor(name, age) {
-    this.name = name;
-    this.age = age;
+    this._name = name;
+    this._age = age;
   }
-  get getterForName() {
-    return this.name;
+ 
+  get name() {
+    return this._name;
   }
-
-  set setterForAge(age) {
-    this.age = age;
+ 
+  
+  set age(age) {
+    this._age = age;
   }
 }
-
-// student and teacher are subclasses/child classes
+ 
 class Student extends Person {
-  constructor(name, age) {
-    super(name, age);
-  }
   study() {
     console.log(`${this.name} is studying`);
-  };
-}
-
-class Teacher extends Person {
-  constructor(name, age) {
-    super(name, age);
   }
+}
+ 
+class Teacher extends Person {
   teach() {
     console.log(`${this.name} is teaching`);
-  };
+  }
 }
 
 // Do not change the code below this line
